@@ -12,18 +12,18 @@ npm install fastify-typeorm
 ## Usage
 
 ```javascript
-const fastify = require("fastify")();
-const ftypeorm = require("fastify-typeorm");
+const fastify = require('fastify')();
+const ftypeorm = require('fastify-typeorm');
 
 const typeormConfig = {
-  instance: "typeorm", // the name of fastify plugin instance.
+  instance: 'db', // the name of fastify plugin instance. defaults to db
   typeormConfig // this is an optional param, see: http://typeorm.io/#/using-ormconfig
 };
 
 fastify.register(ftypeorm, typeormConfig).ready();
 
 fastify.listen(3000, () => {
-  console.log("> listening on port 3000");
+  console.log('> listening on port 3000');
 });
 ```
 
