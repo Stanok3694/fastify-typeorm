@@ -1,0 +1,24 @@
+{
+  "name": "fastify-typeorm",
+  "version": "1.0.0",
+  "description": "fastify plugin for typeorm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axhon/fastify-typeorm.git"
+  },
+  "keywords": [
+    "typeorm",
+    "fastify",
+    "plugin"
+  ],
+  "author": "Axhon Ruiz (https://axhon.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axhon/fastify-typeorm/issues"
+  },
+  "homepage": "https://github.com/axhon/fastify-typeorm#readme"
+}
