@@ -2,9 +2,13 @@
   "name": "fastify-typeorm",
   "version": "1.0.0",
   "description": "fastify plugin for typeorm",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": [
+    "dist/index.d.ts"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typescript": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,10 +26,12 @@
   },
   "homepage": "https://github.com/axhon/fastify-typeorm#readme",
   "dependencies": {
-    "fastify-plugin": "^1.2.1"
+    "fastify": "^1.13.0",
+    "fastify-plugin": "^1.2.1",
+    "typeorm": "^0.2.8"
   },
-  "peerDependencies": {
-    "typeorm": "^0.2.0"
-    
+  "devDependencies": {
+    "@types/node": "^10.12.5",
+    "typescript": "^3.1.6"
   }
 }
