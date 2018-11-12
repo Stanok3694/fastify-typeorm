@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "fastify plugin for typeorm",
   "main": "dist/index.js",
-  "types": [
-    "dist/index.d.ts"
-  ],
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha",
     "build": "tsc"
