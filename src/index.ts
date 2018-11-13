@@ -1,5 +1,5 @@
 import fp, { nextCallback, PluginOptions } from "fastify-plugin";
-import { Plugin } from "fastify";
+import { FastifyInstance } from "fastify";
 import {
   createConnection,
   createConnections,
@@ -9,7 +9,7 @@ import {
 const pluginFactory = (
   connectionCreator: typeof createConnection | typeof createConnections
 ) => (
-  fastify: any,
+  fastify: FastifyInstance,
   {
     instance = "db",
     typeormConfig
@@ -22,7 +22,7 @@ const pluginFactory = (
   if (!typeormConfig) {
     (connectionCreator as typeof createConnection)()
       .then(connection => {
-        fastify.register(instance, connection);
+        fastify.decorate(instance, connection);
         next();
       })
       .catch(next);
@@ -31,7 +31,7 @@ const pluginFactory = (
       typeormConfig as ConnectionOptions
     )
       .then(connection => {
-        fastify.register(instance, connection);
+        fastify.decorate(instance, connection);
         next();
       })
       .catch(next);
