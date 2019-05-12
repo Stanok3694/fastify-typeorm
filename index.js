@@ -24,7 +24,7 @@ const plugin = fp(handler, {
   name: 'fastify-typeorm'
 });
 
-plugin.many = fp(function (fastify, opts, next){
+plugin.many = fp(async function (fastify, opts, next){
   try {
     if (!opts.typeormConfig) {
       const connection = await require('typeorm').createConnections();
