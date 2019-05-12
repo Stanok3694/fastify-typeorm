@@ -40,7 +40,7 @@ plugin.many = fp(function (fastify, opts, next){
     next(e);
   }
 }, {
-  fastify: '1.x',
+  fastify: '2.x',
   name: 'fastify-typeorm'
 })
 
