@@ -20,7 +20,7 @@ async function handler(fastify, opts, next) {
 }
 
 const plugin = fp(handler, {
-  fastify: '1.x',
+  fastify: '2.x',
   name: 'fastify-typeorm'
 });
 
